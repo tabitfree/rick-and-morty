@@ -1,0 +1,7 @@
+{
+  "name": "zoobook",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

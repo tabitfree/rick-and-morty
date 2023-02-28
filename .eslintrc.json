@@ -1,0 +1,30 @@
+{
+  "extends": ["@ackee/eslint-config", "prettier", "plugin:import/typescript"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+    },
+    "node": {
+      "extensions": [".js", ".jsx", ".ts", ".tsx"],
+      "moduleDirectory": ["node_modules", "src/"]
+    }
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off",
+    // TODO: remove this and refactor all the unnamed default exports
+    "import/no-anonymous-default-export": "off",
+    "react/prop-types": "off"
+  },
+  "globals": {
+    // "__IS_DEV_SERVER__": true
+    // "__IS_PROD_BUILD__": true,
+    // "__IS_STAGE_BUILD__": false,
+    // "__IS_DEV_BUILD__": true,
+  }
+}

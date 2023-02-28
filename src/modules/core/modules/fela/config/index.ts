@@ -1,0 +1,1 @@
+export { configureRenderer } from "./renderer";
