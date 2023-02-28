@@ -29,7 +29,7 @@ TBD
 ### Requirements
 Implement as much requirements as possible
 
-* The app has to be written in TypeScrip
+* The app has to be written in TypeScript
 * The app will use graphQL API
 * You can use our skeleton (this repository)
 * Application should be able to run on every device and every orientation
