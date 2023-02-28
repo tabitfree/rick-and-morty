@@ -1,6 +1,43 @@
-# ZooBook Frontend App
+# Rick and Morty – Frontend Task App
+## Description
+Hello adventurer! 
+
+You have been summoned here to test your might. We are challenging you to create few screens of the Rick and Morty app.
+
+[Rick and Morty](https://en.wikipedia.org/wiki/Rick_and_Morty) is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's nighttime programming block Adult Swim.
+
+We want you to create following screens with real API data from the Rick and [Morty API](https://rickandmortyapi.com/documentation)
+
+### List of characters
+Display a list of characters. Since there are 600+ characters on the API you cannot fetch all of them at once - you should use some sort of paging. The API is ready for that.
+
+API resources
+https://rickandmortyapi.com/documentation/#get-all-characters
+
+### Character detail
+Display detail of a single character. 
+
+API resources
+https://rickandmortyapi.com/documentation/#get-a-single-character
+
+### The design 
+TBD
+
+### Requirements
+Implement as much requirements as possible
+
+* The app has to be written in TypeScrip
+* The app will use graphQL API
+* You can use our skeleton (this repository)
+* Application should be able to run on every device and every orientation
+* If you want to add anything extra, just go for it!
+* Send us as a link to your git repository with the source code.
+
+## Our stack
 
 Hybrid app based on React and Ionic frameworks.
+We are using [react-query](https://tanstack.com/query/latest/docs/react/overview) to make api calls, [fela](https://github.com/robinweser/fela) to handle styling
+and [jotai](https://jotai.org/) for state management
 
 ## Instalation
 
@@ -112,20 +149,4 @@ $  yarn:start
 
 ```bash
 $  yarn:start:electron
-```
-
-## Localization
-
-Localizations are being loaded from json files inside `src/localizations` and injected using `react-intl`
-
-### Updating localization files
-
-We are using [lokse](https://github.com/AckeeCZ/lokse) package in order to get the latest translations from a google spreadsheet.
-
-Spreadsheets API requires a Service Account. More about [authentication here](https://github.com/AckeeCZ/lokse/blob/master/docs/web/src/pages/en/authentication.md). Should you struggle with auth ask FE team lead to provide `.env.local` for you.
-
-Once auth is setup you can just run
-
-```bash
-$ yarn localize
 ```
