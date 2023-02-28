@@ -1,4 +1,7 @@
+![rick and morty](./rick-and-morty-hero.webp)
+
 # Rick and Morty – Frontend Task App
+
 ## Description
 Hello adventurer! 
 
