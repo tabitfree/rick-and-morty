@@ -32,7 +32,7 @@ Implement as much requirements as possible
 * The app has to be written in TypeScript
 * The app will use graphQL API
 * You can use our skeleton (this repository)
-* Application should be able to run on every device and every orientation (web browser, no need to bundle Android/iOS app, but if you want its a huge plus!)
+* Application should be able to run on every device and every orientation (web browser, no need to bundle Android/iOS app, but if you want it's a huge plus!)
 * If you want to add anything extra, just go for it!
 * Send us as a link to your git repository with the source code.
 
@@ -68,7 +68,7 @@ Node version >=16.0.0 in order to run tests
 $ yarn start
 ```
 
-## Previewing and development on real devices
+## Previewing and development on real devices (Optional)
 
 ## iOS 🍏
 
