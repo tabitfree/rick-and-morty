@@ -23,8 +23,20 @@ Display detail of a single character.
 API resources
 https://rickandmortyapi.com/documentation/#get-a-single-character
 
+### Search (optional)
+Search for characters
+
+API resources
+https://rickandmortyapi.com/documentation/#get-all-characters
+
+### Add to favourites (optional)
+Save characters to favourites, the API doesn't support this feature, so you'll have to figure out
+
 ### The design 
-TBD
+
+You can find all the screens [here in figma](https://www.figma.com/file/X3Wp9K8ukE8slVkCdL8RZX/Rick-and-Morty-Test-Task-Design?node-id=0%3A1&t=svEAsKP8jJg1wEAz-0) 
+
+![rick and morty](./rick_and_morty_thumbnail.png)
 
 ### Requirements
 Implement as much requirements as possible
