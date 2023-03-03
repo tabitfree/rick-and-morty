@@ -49,7 +49,7 @@ and [jotai](https://jotai.org/) for state management
 It's recommended to have Ionic CLI installed globally in order to make hybrid builds etc.
 
 ```bash
-$ yarn global -g @ionic/cli
+$ yarn global add @ionic/cli
 ```
 
 ### Set yarn as default package manger for Ionic
