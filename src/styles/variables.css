@@ -1,14 +1,13 @@
 /** Ionic CSS Variables **/
 :root {
-
     /** background **/
     --color-background-primary: #fff;
-    --color-background-secondary: #F0F0F5;
+    --color-background-secondary: #f0f0f5;
     --color-background-tertiary: #fff;
-    --color-background-quaternary: #F7F7FC;
+    --color-background-quaternary: #f7f7fc;
 
     /** label **/
-    --color-label-primary: #25252E;
+    --color-label-primary: #25252e;
     --color-label-secondary: rgba(46, 46, 66, 0.6);
     --color-label-tertiary: rgba(26, 26, 66, 0.3);
     --color-label-quaternary: rgba(13, 13, 66, 0.18);
@@ -25,55 +24,54 @@
 
     /** border colors **/
     --color-border-with-transparency: rgba(20, 20, 66, 0.12);
-    --color-border-no-transparency: #E1E1E8;
+    --color-border-no-transparency: #e1e1e8;
 
     /** Greys **/
-    --color-grey-1: #8E8E99;
-    --color-grey-2: #ABABB8;
-    --color-grey-3: #BEBECC;
-    --color-grey-4: #CECEDB;
-    --color-grey-5: #E6E6ED;
-    --color-grey-6: #F2F2F7;
+    --color-grey-1: #8e8e99;
+    --color-grey-2: #ababb8;
+    --color-grey-3: #bebecc;
+    --color-grey-4: #cecedb;
+    --color-grey-5: #e6e6ed;
+    --color-grey-6: #f2f2f7;
 
     /** Tints **/
-    --color-tints-red: #FF4238;
-    --color-tints-peach: #FF672B;
-    --color-tints-orange: #FF9412;
-    --color-tints-yellow: #FFBF00;
-    --color-tints-green: #2EC763;
-    --color-tints-mint: #00C7B0;
-    --color-tints-teal: #2ABBD1;
-    --color-tints-cyan: #2AAEEB;
-    --color-tints-blue: #0F7FFF;
-    --color-tints-indigo: #6B6BE3;
-    --color-tints-purple: #B85EE6;
-    --color-tints-pink: #F255BE;
-    --color-tints-rose: #FF3068;
+    --color-tints-red: #ff4238;
+    --color-tints-peach: #ff672b;
+    --color-tints-orange: #ff9412;
+    --color-tints-yellow: #ffbf00;
+    --color-tints-green: #2ec763;
+    --color-tints-mint: #00c7b0;
+    --color-tints-teal: #2abbd1;
+    --color-tints-cyan: #2aaeeb;
+    --color-tints-blue: #0f7fff;
+    --color-tints-indigo: #6b6be3;
+    --color-tints-purple: #b85ee6;
+    --color-tints-pink: #f255be;
+    --color-tints-rose: #ff3068;
 
     /** Red accents **/
-    --color-red-accent-darker-16: #D6322F;
-    --color-red-accent-darker-8: #EB3A34;
+    --color-red-accent-darker-16: #d6322f;
+    --color-red-accent-darker-8: #eb3a34;
     --color-red-accent-lighter-60: rgba(255, 59, 56, 0.4);
     --color-red-accent-lighter-90: rgba(255, 56, 69, 0.1);
 
     /** Orange accents **/
-    --color-orange-accent-darker-16: #D6750F;
-    --color-orange-accent-darker-8: #EB8511;
+    --color-orange-accent-darker-16: #d6750f;
+    --color-orange-accent-darker-8: #eb8511;
     --color-orange-accent-lighter-60: rgba(255, 148, 18, 0.4);
     --color-orange-accent-lighter-90: rgba(255, 125, 18, 0.1);
 
     /** Green accents **/
-    --color-green-accent-darker-16: #27A74F;
-    --color-green-accent-darker-8: #2AB759;
+    --color-green-accent-darker-16: #27a74f;
+    --color-green-accent-darker-8: #2ab759;
     --color-green-accent-lighter-60: rgba(46, 199, 94, 0.4);
     --color-green-accent-lighter-90: rgba(46, 199, 77, 0.1);
 
-      /** Blue accents **/
-      --color-blue-accent-darker-16: #0D64D6;
-      --color-blue-accent-darker-8: #0E71EB;
-      --color-blue-accent-lighter-60: rgba(15, 127, 255, 0.4);
-      --color-blue-accent-lighter-90: rgba(15, 103, 255, 0.14);
-
+    /** Blue accents **/
+    --color-blue-accent-darker-16: #0d64d6;
+    --color-blue-accent-darker-8: #0e71eb;
+    --color-blue-accent-lighter-60: rgba(15, 127, 255, 0.4);
+    --color-blue-accent-lighter-90: rgba(15, 103, 255, 0.14);
 
     /** Overlays **/
     --color-overlay-darkener: rgba(16, 26, 66, 0.2);
@@ -86,11 +84,10 @@
 
 body.dark {
     /** background **/
-    --color-background-primary: #1F1F22;
+    --color-background-primary: #1f1f22;
     --color-background-secondary: #101012;
-    --color-background-tertiary: #2B2B2E;
+    --color-background-tertiary: #2b2b2e;
     --color-background-quaternary: #333336;
-
 
     /** label **/
     --color-label-primary: #fff;
@@ -110,52 +107,52 @@ body.dark {
 
     /** border colors **/
     --color-border-with-transparency: rgba(157, 157, 157, 0.12);
-    --color-border-no-transparency: #38383D;
+    --color-border-no-transparency: #38383d;
 
     /** Greys **/
-    --color-grey-1: #8E8E99;
-    --color-grey-2: #6D6D75;
-    --color-grey-3: #47474D;
-    --color-grey-4: #38383D;
-    --color-grey-5: #2F2F33;
+    --color-grey-1: #8e8e99;
+    --color-grey-2: #6d6d75;
+    --color-grey-3: #47474d;
+    --color-grey-4: #38383d;
+    --color-grey-5: #2f2f33;
     --color-grey-6: #202024;
 
     /** Tints **/
-    --color-tints-red: #FF4C42;
-    --color-tints-peach: #FF7236;
-    --color-tints-orange: #FFA01C;
-    --color-tints-yellow: #FFCB0F;
-    --color-tints-green: #2FD468;
-    --color-tints-mint: #06D1B9;
-    --color-tints-teal: #23C5DE;
-    --color-tints-cyan: #29B8FF;
-    --color-tints-blue: #1F87FF;
-    --color-tints-indigo: #7171F5;
-    --color-tints-purple: #C362F5;
-    --color-tints-pink: #FF57C7;
-    --color-tints-rose: #FF3877;
+    --color-tints-red: #ff4c42;
+    --color-tints-peach: #ff7236;
+    --color-tints-orange: #ffa01c;
+    --color-tints-yellow: #ffcb0f;
+    --color-tints-green: #2fd468;
+    --color-tints-mint: #06d1b9;
+    --color-tints-teal: #23c5de;
+    --color-tints-cyan: #29b8ff;
+    --color-tints-blue: #1f87ff;
+    --color-tints-indigo: #7171f5;
+    --color-tints-purple: #c362f5;
+    --color-tints-pink: #ff57c7;
+    --color-tints-rose: #ff3877;
 
     /** Red accents **/
-    --color-red-accent-darker-16: #D63A37;
-    --color-red-accent-darker-8: #EB433D;
+    --color-red-accent-darker-16: #d63a37;
+    --color-red-accent-darker-8: #eb433d;
     --color-red-accent-lighter-60: rgba(255, 69, 66, 0.6);
     --color-red-accent-lighter-90: rgba(255, 66, 79, 0.2);
 
     /** Orange accents **/
-    --color-orange-accent-darker-16: #D67A17;
-    --color-orange-accent-darker-8: #EB8511;
+    --color-orange-accent-darker-16: #d67a17;
+    --color-orange-accent-darker-8: #eb8511;
     --color-orange-accent-lighter-60: rgba(255, 153, 28, 0.6);
     --color-orange-accent-lighter-90: rgba(255, 130, 28, 0.2);
 
     /** Green accents **/
-    --color-green-accent-darker-16: #27B253;
-    --color-green-accent-darker-8: #2BC35E;
+    --color-green-accent-darker-16: #27b253;
+    --color-green-accent-darker-8: #2bc35e;
     --color-green-accent-lighter-60: rgba(47, 212, 99, 0.6);
     --color-green-accent-lighter-90: rgba(47, 212, 80, 0.2);
 
     /** Blue accents **/
-    --color-blue-accent-darker-16: #1A71D6;
-    --color-blue-accent-darker-8: #1D7CEB;
+    --color-blue-accent-darker-16: #1a71d6;
+    --color-blue-accent-darker-8: #1d7ceb;
     --color-blue-accent-lighter-60: rgba(31, 135, 255, 0.6);
     --color-blue-accent-lighter-90: rgba(31, 113, 255, 0.2);
 
@@ -176,7 +173,6 @@ body.dark {
     --ion-background-color: var(--ion-color-step-100);
 }
 
-
 /*
      * Material Design Dark Theme
      * -------------------------------------------
@@ -184,4 +180,11 @@ body.dark {
 
 .md body {
     --ion-background-color: #121212;
+}
+
+/*  */
+
+.ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
 }

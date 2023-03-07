@@ -11,13 +11,18 @@ export const theme = {
         xl: 1200,
     },
     widths: {
-        spacing: 8,
+        spacing8: 8,
+        spacing16: 16,
     },
     border: {
         radius: 4,
         radius6: 6,
         radius8: 8,
         radius12: 12,
+        radius14: 14,
+    },
+    background: {
+        main: '#000',
     },
 };
 

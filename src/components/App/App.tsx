@@ -34,8 +34,10 @@ import '@ionic/react/css/display.css';
 import 'styles/vendors/ionic/ion-variables.css';
 import 'styles/variables.css';
 
+import { CharacterPage } from 'components/CharacterPage';
 import { HomePage } from '../HomePage';
 import { Episodes } from '../Episodes';
+import { RendererProvider } from 'react-fela';
 
 export const App = () => (
     <IonApp>
@@ -50,7 +52,9 @@ export const App = () => (
                     */}
                     <Route
                         path="/home"
-                        render={() => <HomePage />}
+                        render={() => (
+                                <HomePage />
+                            )}
                         exact={true}
                     />
                     <Route
@@ -58,6 +62,13 @@ export const App = () => (
                         render={() => <Episodes />}
                         exact={true}
                     />
+                    <Route
+                        path="/character/:id"
+                        render={() => (
+                            <CharacterPage />
+                        )}
+                    exact={true}
+                     />
                 </IonRouterOutlet>
 
                 <IonTabBar slot="bottom">
