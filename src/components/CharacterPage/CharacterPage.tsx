@@ -2,12 +2,13 @@ import { useFelaEnhanced } from 'hooks';
 
 import type { RulesExtend } from 'styles/theme';
 import * as felaRules from './CharacterPage.rules';
-import { IonButton, IonIcon, IonPage, IonListHeader, IonLabel, IonItem, IonHeader, IonList, IonImg, IonTitle, IonContent, IonButtons, IonBackButton, IonToolbar} from '@ionic/react';
+import { IonButton, IonIcon, IonRippleEffect, IonPage, IonListHeader, IonLabel, IonItem, IonHeader, IonList, IonImg, IonTitle, IonContent, IonButtons, IonBackButton, IonToolbar} from '@ionic/react';
 import { useParams } from 'react-router';
 import { useOneCharacter } from 'modules/characters/hooks/useOneCharacter';
 import { star, starOutline } from 'ionicons/icons';
 import { useAtom } from 'jotai';
 import { favouriteCharactersIdsAtom } from 'modules/core/modules/jotai';
+import { useEffect, useState } from 'react';
 
 export interface CharacterProps {
     extend?: RulesExtend<typeof felaRules>;
@@ -18,7 +19,8 @@ export const CharacterPage = ({ extend }: CharacterProps) => {
     const [favouriteCharacters, setFavouriteCharacters] = useAtom(favouriteCharactersIdsAtom)
 
     const { id } = useParams<{id:string}>();
-    const {data, isLoading, error} = useOneCharacter(id)
+    const {data, isLoading, error} = useOneCharacter(id);
+    const [isFavourite, setFavourite] = useState<boolean>(favouriteCharacters.indexOf(id) != -1);
 
     const handleFavClick = () => {
         const favChars = [...favouriteCharacters];
@@ -27,13 +29,13 @@ export const CharacterPage = ({ extend }: CharacterProps) => {
         // if character is already favourite, remove
         if (favIdx != -1) {
             favChars.splice(favIdx, 1);
-            return false;
+            setFavouriteCharacters([...favChars]);
+        } else{ // character is not in favourite
+            favChars.unshift(id);
         } 
 
-        // character is not in favourite
-        favChars.unshift(id)
-                
-
+        setFavourite(!isFavourite);
+        setFavouriteCharacters([...favChars]);
     }
     
     return (
@@ -58,7 +60,7 @@ export const CharacterPage = ({ extend }: CharacterProps) => {
                     </IonLabel>
                     <IonButtons>
                         <IonButton slot="end" onClick={handleFavClick}>
-                            <IonIcon icon={starOutline} slot="icon-only"></IonIcon>
+                            <IonIcon icon={isFavourite ? star : starOutline} slot="icon-only"></IonIcon>
                         </IonButton>
                     </IonButtons>
                 </IonItem>
@@ -69,11 +71,11 @@ export const CharacterPage = ({ extend }: CharacterProps) => {
 
                     <IonItem>
                         <IonLabel>Status</IonLabel>
-                        <p>{data.character.status}</p>
+                        <p>{data.character.status || "-"}</p>
                     </IonItem>
                     <IonItem>
                         <IonLabel>Species</IonLabel>
-                        <p>{data.character.species}</p>
+                        <p>{data.character.species || "-"}</p>
                     </IonItem>
                     <IonItem>
                         <IonLabel>Type</IonLabel>
@@ -81,15 +83,15 @@ export const CharacterPage = ({ extend }: CharacterProps) => {
                     </IonItem>
                     <IonItem>
                         <IonLabel>Gender</IonLabel>
-                        <p>{data.character.gender}</p>
+                        <p>{data.character.gender || "-"}</p>
                     </IonItem>
                     <IonItem>
                         <IonLabel>Origin</IonLabel>
-                        <p>{data.character.origin.name}</p>
+                        <p>{data.character.origin.name || "-"}</p>
                     </IonItem>
                     <IonItem lines='full'>
                         <IonLabel>Location</IonLabel>
-                        <p>{data.character.location.name}</p>
+                        <p>{data.character.location.name || "-"}</p>
                     </IonItem>
                     
                 </IonList>
