@@ -1,4 +1,5 @@
 import { TRule } from 'fela';
+
 import { TRuleWithTheme } from 'styles';
 
 export const image: TRuleWithTheme = ({ theme }) => ({

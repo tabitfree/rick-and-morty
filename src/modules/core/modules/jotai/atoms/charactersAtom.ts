@@ -1,7 +1,10 @@
-import { atomWithStorage, createJSONStorage } from 'jotai/utils';
+import { atomWithStorage } from 'jotai/utils';
 import { atom } from 'jotai';
 
-import type { CharactersQueryResults } from 'modules/api';
+import type {
+    CharactersByIdsQueryVariables,
+    CharactersQueryResults,
+} from 'modules/api';
 
 export type FavouriteCharactersIds = string[];
 

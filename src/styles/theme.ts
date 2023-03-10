@@ -26,6 +26,14 @@ export const theme = {
         side: 'rgba(46, 46, 66, 0.6)',
         detail: 'rgba(26, 26, 66, 0.3)',
     },
+    fontSizes: {
+        sm: '12px',
+        md: '16px',
+        mdX: '18px',
+        lg: '21px',
+        xl: '25px',
+        xxl: '34px',
+    },
 };
 
 export type Theme = typeof theme;

@@ -1,19 +1,21 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import { useState } from "react";
 import { useAtom } from "jotai";
 
-import { favouriteCharactersIdsAtom } from "modules/core/modules/jotai";
 import { IonIcon, IonImg, IonItem, IonLabel, IonButtons, IonButton, IonList, IonListHeader } from "@ionic/react";
 import { star, starOutline } from 'ionicons/icons';
+
+import { favouriteCharactersIdsAtom } from "modules/core/modules/jotai";
 import { useFelaEnhanced } from "hooks";
 import { RulesExtend } from "styles";
 
+import { CharacterQueryResult } from "modules/api";
+
 import * as felaRules from './CharacterInfo.rules'
-import { CharacterQuery } from "modules/api";
 
 export interface CharacterInfoProps {
-    characterData: CharacterQuery['character'];
+    characterData: CharacterQueryResult;
     extend?: RulesExtend<typeof felaRules>;
 }
 
@@ -21,14 +23,14 @@ export const CharacterInfo: FC<CharacterInfoProps> = ({characterData, extend}) =
     const {styles} = useFelaEnhanced(felaRules, {extend});
 
     const [ favouriteCharacters, setFavouriteCharacters ] = useAtom(favouriteCharactersIdsAtom)
-    const [ isFavourite, setFavourite ] = useState<boolean>(favouriteCharacters.indexOf(characterData.id) != -1);
+    const [ isFavourite, setFavourite ] = useState<boolean>(favouriteCharacters.indexOf(characterData.id) !== -1);
 
-const handleFavClick = () => {
+    const handleFavClick = () => {
         const favChars = [ ...favouriteCharacters ];
         const favIdx = favChars.indexOf( characterData.id );
         
         // if character is already favourite, remove
-        if (favIdx != -1) {
+        if (favIdx !== -1) {
             favChars.splice(favIdx, 1);
         } else{ // character is not in favourite
             favChars.unshift(characterData.id);
@@ -37,6 +39,10 @@ const handleFavClick = () => {
         setFavourite(!isFavourite);
         setFavouriteCharacters([...favChars]);
     }
+
+    useEffect(() => {
+        setFavourite(favouriteCharacters.indexOf(characterData.id) !== -1)
+    }, [characterData, favouriteCharacters])
 
     return <div>
         <IonImg className={styles.image} src={characterData.image} alt={`Looks of ${characterData.name}`}></IonImg>

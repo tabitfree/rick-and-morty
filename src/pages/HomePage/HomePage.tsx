@@ -1,18 +1,21 @@
 import { IonPage, IonContent, IonHeader, IonToolbar, IonTitle, IonProgressBar, IonSearchbar, SearchbarCustomEvent } from '@ionic/react';
+
+import { useAtom } from 'jotai';
+
 import { CharactersList } from 'components/CharactersList';
 import { useFelaEnhanced } from 'hooks';
-import { useAtom } from 'jotai';
 import { useAllCharacters } from 'modules/characters/hooks';
 import { pageAtom, searchAtom } from 'modules/core/modules/jotai';
 import type { RulesExtend } from 'styles/theme';
 
 import * as felaRules from './HomePage.rules';
+import { FC } from 'react';
 
 export interface HomePageProps {
     extend?: RulesExtend<typeof felaRules>;
 }
 
-export const HomePage = ({ extend }: HomePageProps) => {
+export const HomePage: FC<HomePageProps> = ({ extend }) => {
     const { styles } = useFelaEnhanced(felaRules, { extend });
     const [curPage, setCurPage] = useAtom(pageAtom);
     const [curSearch, setCurSearch] = useAtom(searchAtom);

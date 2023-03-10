@@ -1,6 +1,6 @@
 import { IonApp } from '@ionic/react';
 
-import { playCircle, home } from 'ionicons/icons';
+import { playCircle, home, heart } from 'ionicons/icons';
 
 import {
     IonTabs,
@@ -35,9 +35,9 @@ import 'styles/vendors/ionic/ion-variables.css';
 import 'styles/variables.css';
 
 import { CharacterPage } from 'pages/CharacterPage';
+
 import { HomePage } from '../../pages/HomePage';
-import { Episodes } from '../../pages/Episodes';
-import { RendererProvider } from 'react-fela';
+import { Favourites } from '../../pages/Favourites';
 
 export const App = () => (
     <IonApp>
@@ -57,17 +57,16 @@ export const App = () => (
                             )}
                         exact={true}
                     />
+                    
                     <Route
-                        path="/episodes"
-                        render={() => <Episodes />}
-                        exact={true}
+                        path="/favourites"
+                        component={Favourites}
                     />
+
                     <Route
                         path="/character/:id"
-                        render={() => (
-                            <CharacterPage />
-                        )}
-                    exact={true}
+                        component={CharacterPage}
+                        exact
                      />
                 </IonRouterOutlet>
 
@@ -77,9 +76,9 @@ export const App = () => (
                         <IonLabel>Home</IonLabel>
                     </IonTabButton>
 
-                    <IonTabButton tab="episodes" href="/episodes">
-                        <IonIcon icon={playCircle} />
-                        <IonLabel>Episodes</IonLabel>
+                    <IonTabButton tab="favourites" href="/favourites">
+                        <IonIcon icon={heart} />
+                        <IonLabel>Favourites</IonLabel>
                     </IonTabButton>
                 </IonTabBar>
             </IonTabs>

@@ -10,7 +10,7 @@ export function useOneCharacter<TData = CharacterQuery>(
         options?: UseApiParams<CharacterQuery, Error, TData>['options'];
     } = { options: undefined },
 ) {
-    const { data, isLoading, error, isSuccess } = useApi<
+    const { data, isLoading, error, isSuccess, refetch } = useApi<
         CharacterQuery,
         Error,
         TData
@@ -21,5 +21,5 @@ export function useOneCharacter<TData = CharacterQuery>(
         variables: { id },
     });
 
-    return { data, isLoading, error, isSuccess };
+    return { data, isLoading, error, isSuccess, refetch };
 }

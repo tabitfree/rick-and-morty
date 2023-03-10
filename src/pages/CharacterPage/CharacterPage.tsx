@@ -1,24 +1,28 @@
-import { useFelaEnhanced } from 'hooks';
 
-import type { RulesExtend } from 'styles/theme';
-import * as felaRules from './CharacterPage.rules';
 import { IonPage, IonHeader, IonTitle, IonContent, IonButtons, IonBackButton, IonToolbar} from '@ionic/react';
 import { useParams } from 'react-router';
+
+import type { RulesExtend } from 'styles/theme';
+import { useFelaEnhanced } from 'hooks';
 import { useOneCharacter } from 'modules/characters/hooks/useOneCharacter';
-import { useAtom } from 'jotai';
-import { favouriteCharactersIdsAtom } from 'modules/core/modules/jotai';
-import { useState } from 'react';
 import { CharacterInfo } from 'components/CharacterInfo';
+
+import * as felaRules from './CharacterPage.rules';
+import { FC, useEffect } from 'react';
 
 export interface CharacterProps {
     extend?: RulesExtend<typeof felaRules>;
 }
 
-export const CharacterPage = ({ extend }: CharacterProps) => {
+export const CharacterPage: FC<CharacterProps> = ({ extend }) => {
     const { styles } = useFelaEnhanced(felaRules, { extend });
 
     const { id } = useParams<{id:string}>();
-    const { data } = useOneCharacter(id);
+    const { data, refetch } = useOneCharacter(id);
+
+    useEffect(() => {
+        refetch()
+    }, [id])
 
     return (
         <IonPage>
@@ -31,8 +35,8 @@ export const CharacterPage = ({ extend }: CharacterProps) => {
                 </IonToolbar>
             </IonHeader>
             <IonContent className={styles.container} >
-
-            {data?.character && <CharacterInfo characterData={data.character} />}
+            
+            {data?.character && <CharacterInfo characterData={data?.character} />}
                 
             </IonContent>
         </IonPage>

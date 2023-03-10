@@ -57,3 +57,13 @@ export const oneCharacter = gql`
         }
     }
 `;
+
+export const charactersById = gql`
+    query charactersByIds($ids: [ID!]!) {
+        charactersByIds(ids: $ids) {
+            id
+            name
+            image
+        }
+    }
+`;
