@@ -34,9 +34,9 @@ import '@ionic/react/css/display.css';
 import 'styles/vendors/ionic/ion-variables.css';
 import 'styles/variables.css';
 
-import { CharacterPage } from 'components/CharacterPage';
-import { HomePage } from '../HomePage';
-import { Episodes } from '../Episodes';
+import { CharacterPage } from 'pages/CharacterPage';
+import { HomePage } from '../../pages/HomePage';
+import { Episodes } from '../../pages/Episodes';
 import { RendererProvider } from 'react-fela';
 
 export const App = () => (

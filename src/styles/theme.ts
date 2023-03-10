@@ -21,8 +21,10 @@ export const theme = {
         radius12: 12,
         radius14: 14,
     },
-    background: {
-        main: '#000',
+    colors: {
+        main: '#25252E',
+        side: 'rgba(46, 46, 66, 0.6)',
+        detail: 'rgba(26, 26, 66, 0.3)',
     },
 };
 

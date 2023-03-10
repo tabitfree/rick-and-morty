@@ -1,9 +1,5 @@
-import type { TRuleWithTheme } from 'styles/theme';
-
-export const container: TRuleWithTheme = ({ theme }) => ({
-    background: theme.background.main,
-    padding: theme.widths.spacing16,
-});
+import { TRule } from 'fela';
+import { TRuleWithTheme } from 'styles';
 
 export const image: TRuleWithTheme = ({ theme }) => ({
     maxWidth: 500,
@@ -11,4 +7,8 @@ export const image: TRuleWithTheme = ({ theme }) => ({
     marginBottom: 20,
     borderRadius: theme.border.radius14,
     margin: '20px 16px 15px',
+});
+
+export const title: TRule = () => ({
+    whiteSpace: 'break-spaces',
 });
