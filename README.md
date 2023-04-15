@@ -1,9 +1,25 @@
+# MY DESCRIPTION
+
+This project was a successful job application where I demonstrated my skills in React, ReactQuery, TypeScript, and GraphQL.
+
+The project's tech stack also included Ionic Framework, Jotai, and Fela, which I learned and applied throughout the development process.
+
+Features I implemented:
+
+-   List of Characters
+-   Character Detail page
+-   Search - with pagination from graphql api
+-   Favourite characters functionality as well as the page itself (being saved to localStorage).
+
+**--------------------------------------------------------------------------------------------------------------------**
+
 ![rick and morty](./rick-and-morty-hero.webp)
 
 # Rick and Morty – Frontend Task App
 
 ## Description
-Hello adventurer! 
+
+Hello adventurer!
 
 You have been summoned here to test your might. We are challenging you to create few screens of the Rick and Morty app.
 
@@ -12,41 +28,46 @@ You have been summoned here to test your might. We are challenging you to create
 We want you to create following screens with real API data from the Rick and [Morty API](https://rickandmortyapi.com/documentation)
 
 ### List of characters
+
 Display a list of characters. Since there are 600+ characters on the API you cannot fetch all of them at once - you should use some sort of paging. The API is ready for that.
 
 API resources
 https://rickandmortyapi.com/documentation/#get-all-characters
 
 ### Character detail
-Display detail of a single character. 
+
+Display detail of a single character.
 
 API resources
 https://rickandmortyapi.com/documentation/#get-a-single-character
 
 ### Search (optional)
+
 Search for characters
 
 API resources
 https://rickandmortyapi.com/documentation/#get-all-characters
 
 ### Add to favourites (optional)
+
 Save characters to favourites, the API doesn't support this feature, so you'll have to figure out
 
-### The design 
+### The design
 
-You can find all the screens [here in figma](https://www.figma.com/file/X3Wp9K8ukE8slVkCdL8RZX/Rick-and-Morty-Test-Task-Design?node-id=0%3A1&t=svEAsKP8jJg1wEAz-0) 
+You can find all the screens [here in figma](https://www.figma.com/file/X3Wp9K8ukE8slVkCdL8RZX/Rick-and-Morty-Test-Task-Design?node-id=0%3A1&t=svEAsKP8jJg1wEAz-0)
 
 ![rick and morty](./rick_and_morty_thumbnail.png)
 
 ### Requirements
+
 Implement as much requirements as possible
 
-* The app has to be written in TypeScript
-* The app will use graphQL API
-* You can use our skeleton (this repository)
-* Application should be able to run on every device and every orientation (web browser, no need to bundle Android/iOS app, but if you want it's a huge plus!)
-* If you want to add anything extra, just go for it!
-* Send us as a link to your git repository with the source code.
+-   The app has to be written in TypeScript
+-   The app will use graphQL API
+-   You can use our skeleton (this repository)
+-   Application should be able to run on every device and every orientation (web browser, no need to bundle Android/iOS app, but if you want it's a huge plus!)
+-   If you want to add anything extra, just go for it!
+-   Send us as a link to your git repository with the source code.
 
 ## Our stack
 
